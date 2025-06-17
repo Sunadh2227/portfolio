@@ -26,7 +26,7 @@ st.markdown("""
     /* Main background */
     .stApp {
         background: transparent;
-        color: #000000;
+        color: #ffffff;
     }
 
     /* Custom radio buttons in sidebar */
