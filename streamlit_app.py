@@ -19,17 +19,30 @@ st.markdown("""
     <style>
     /* Sidebar background */
     [data-testid="stSidebar"] {
-        background: transparent;
+        background: linear-gradient(to right, #f7f8fc, #dde9f7);
         padding-top: 2rem;
     }
 
-    /* Main background */
+    /* Full app background */
     .stApp {
-        background: transparent;
-        color: #ffffff;
+        background: linear-gradient(to right, #f7f8fc, #dde9f7);
+        color: #000000;
     }
 
-    /* Custom radio buttons in sidebar */
+    /* Make content area match the gradient */
+    section.main > div {
+        background: linear-gradient(to right, #f7f8fc, #dde9f7);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Text elements */
+    h1, h2, h3, h4, h5, p {
+        color: #1e3c72;
+    }
+
+    /* Radio button animation (reused from earlier) */
     div[data-testid="stSidebar"] .stRadio > div {
         display: flex;
         flex-direction: column;
@@ -37,11 +50,11 @@ st.markdown("""
     }
 
     div[data-testid="stSidebar"] .stRadio > div > label {
-        background-color: #222222;
+        background-color: #ffffff;
         border-radius: 10px;
         padding: 12px 20px;
         font-weight: 600;
-        color: #000000;  /* ✅ Font color changed to black */
+        color: #1e3c72;
         box-shadow: 0 4px 10px rgba(30, 60, 114, 0.1);
         transition: all 0.3s ease-in-out;
         cursor: pointer;
@@ -56,11 +69,12 @@ st.markdown("""
 
     div[data-testid="stSidebar"] .stRadio > div > label[data-selected="true"] {
         background-color: #1e88e5;
-        color: #000000;  /* ✅ Also make selected label font black */
+        color: #ffffff;
         border: 2px solid #1565c0;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # --- Sidebar Navigation ---
 with st.sidebar:
@@ -112,13 +126,34 @@ elif selection == "🛠️ Skills":
         st.markdown("- Jupyter\n- GitHub\n- AWS")
         st.subheader("📂 Visualization")
         st.markdown("- seaborn\n- plotly\n- Tableau/Power BI")
-
 elif selection == "📬 Contact":
     st.title("📬 Contact Me")
+
     st.markdown("""
-    <div style='background-color:#f0f2f6;padding:20px;border-radius:10px'>
-        <p><strong>📧 Email:</strong> sunadhganji22@gmail.com</p>
-        <p><strong>👨‍💻 GitHub:</strong> <a href="https://github.com/Sunadh2227" target="_blank">Sunadh2227</a></p>
-        <p><strong>🔗 LinkedIn:</strong> <a href="https://linkedin.com/in/sunadh-g-828378367" target="_blank">sunadh-g</a></p>
+    <div style="
+        background-color: #f7f8fc;
+        padding: 25px 20px;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #1e3c72;
+        font-size: 16px;
+        line-height: 2;
+    ">
+        <p>📧 <strong>Email:</strong> sunadhganji22@gmail.com</p>
+        <p>👨‍💻 <a href="https://github.com/Sunadh2227" target="_blank" 
+               style="color: #1e88e5; text-decoration: none; font-weight: 600;">
+               github.com/Sunadh2227
+            </a>
+        </p>
+        <p>🔗 <a href="https://linkedin.com/in/sunadh-g-828378367" target="_blank" 
+               style="color: #1e88e5; text-decoration: none; font-weight: 600;">
+               linkedin.com/in/sunadh-g-828378367
+            </a>
+        </p>
     </div>
     """, unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.success("📨 Feel free to reach out via email or connect with me on GitHub and LinkedIn!")
+
+
