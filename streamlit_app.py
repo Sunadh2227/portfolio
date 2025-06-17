@@ -98,7 +98,18 @@ st.markdown("""
 with st.sidebar:
     if lottie_avatar:
         st_lottie(lottie_avatar, height=150, key="avatar")
-    st.title("🚀 Navigation")
+    
+    # Force a styled Navigation header
+    st.markdown("""
+    <h1 style='
+        color: #90caf9;
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: Poppins, sans-serif;
+        margin-bottom: 1.5rem;
+    '>🚀 Navigation</h1>
+    """, unsafe_allow_html=True)
+
     selection = st.radio("Go to", ["🏠 About Me", "💼 Projects", "🛠️ Skills", "📬 Contact"])
 
 # --- Main Page Content ---
