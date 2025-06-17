@@ -19,13 +19,13 @@ st.markdown("""
     <style>
     /* Sidebar background */
     [data-testid="stSidebar"] {
-        background: linear-gradient(to right, #f7f8fc, #dde9f7);
+        background: transparent;
         padding-top: 2rem;
     }
 
     /* Main background */
     .stApp {
-        background: linear-gradient(to right, #f7f8fc, #dde9f7);
+        background: transparent;
         color: #000000;
     }
 
