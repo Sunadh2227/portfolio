@@ -37,11 +37,11 @@ st.markdown("""
     }
 
     div[data-testid="stSidebar"] .stRadio > div > label {
-        background-color: #ffffff;
+        background-color: #222222;
         border-radius: 10px;
         padding: 12px 20px;
         font-weight: 600;
-        color: #000000;
+        color: #333333;
         box-shadow: 0 4px 10px rgba(30, 60, 114, 0.1);
         transition: all 0.3s ease-in-out;
         cursor: pointer;
@@ -56,7 +56,7 @@ st.markdown("""
 
     div[data-testid="stSidebar"] .stRadio > div > label[data-selected="true"] {
         background-color: #1e88e5;
-        color: #f0f0f0;
+        color: #666666;
         border: 2px solid #1565c0;
     }
     </style>
