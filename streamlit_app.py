@@ -16,6 +16,22 @@ lottie_avatar = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_c
 
 # --- Custom CSS ---
 st.markdown("""
+<style>
+/* ... your existing CSS ... */
+
+/* Sidebar Navigation Header */
+[data-testid="stSidebar"] > div:first-child > div > h1 {
+    color: #90caf9;       /* Soft blue */
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
     <style>
     /* Sidebar background */
     [data-testid="stSidebar"] {
